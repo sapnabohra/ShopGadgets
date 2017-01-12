@@ -1,0 +1,161 @@
+#logo{
+    float: left;
+    font-size: 18px;
+    font-height: 200px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 10px 15px 5px 0px;
+    width: 50px;
+    height: 70px;
+    color:  #cb202d;
+
+}
+
+#logotext{
+	 float: left;
+    font-size: 18px;
+    font-height: 200px;
+   font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+	
+    margin: 10px 5px 5px 0px;
+    width: 50px;
+    height: 70px;
+    color: 	#660033;
+
+}
+#logo img{
+padding: 20px 0px 0px 0px;
+margin-left: -20px;
+margin-top:-40px;
+width: 80px;
+height: 60px;
+}
+head{background-color: black;}
+
+	header{
+	background-image:url("back2.jpg");
+	background-repeat:no-repeat;
+	background-size:100%;
+	max-height:50px;
+	}
+	input[type=text] {
+    float:right;
+    width: 100px;
+    height: 45px;
+    
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    
+	box-sizing: border-box;
+    border: 2px solid #ccc;
+	background-image: url('../images/search.png');
+	background-size: 20px 20px;
+	background-position: right;  
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+   
+    
+}
+
+input[type=text]:hover{
+	
+    width: 100%;
+   	}
+input:focus{
+    outline: none;
+	color: black;
+}
+	button {
+		float:right;
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: bold;
+  border: none;
+	color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+  width: 110px;
+  height:45px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+  border-radius: 15px;
+  background-color: #660033;
+ 
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button:hover{
+	opacity:0.3;
+	background-color: black;
+	color: white;
+}
+button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+button .button1
+{
+  margin-right: 60px;
+}
+span #UserName
+{
+  text-align: center;
+}
+.logSearch
+{
+  margin-top:-184px;
+  margin-right:110px;
+}
+.cartCount{
+  width: auto;
+  height: 75px;
+  margin-left:71em;
+  margin-top:26px;
+  box-sizing: border-box;
+    border: 2px solid #ccc;
+    padding: 3px 10px 10px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #d6d6c2;
+
+}
+.countinCart
+{
+  text-align: center;
+ margin-right:84em ;
+ padding-left: 12px;
+ font-weight: bold;
+}
+.cartPrice
+{
+text-align: right;
+font-weight: bold;
+margin-top: -40px;
+padding-right: 7px;
+padding-bottom: 30px;
+}

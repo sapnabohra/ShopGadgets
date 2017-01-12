@@ -1,0 +1,206 @@
+
+
+<head>
+<meta charset="UTF-8">
+<script src="scripts/Login.js">
+
+</script>
+</head>
+<body>
+
+<style>
+body{
+background-image: url("images/back.jpg");
+)
+}
+input[type=text] {
+    width: 50%;
+    padding: 10px 10px 10px 10px;;
+    margin: 25px 50px 0 50px;
+   
+	float: center;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+	
+}
+input[type=password]{
+width: 200px;
+padding: 10px 10px 10px 10px;
+ margin: 30px 60px 10px 90px;
+display: inline-block;
+border: 2px solid #ccc ;
+    border-radius: 6px;
+    box-sizing: border-box;}
+
+input[type=submit] {
+    width: 200px;
+    background-color: #660033;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 30px 50px 10px 200px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	float: center;
+}
+
+input[type=submit]:hover {
+    background-color: #ff6666;
+	
+}
+
+input[type=date] {
+    width: 200px;
+    
+   padding: 10px 10px 10px 10px;;
+     margin: -5px 10px 10px 125px;
+    border: 1px solid #ccc ;
+    border-radius: 4px;
+    cursor: pointer;
+	float:center;
+}
+label{
+font-size:15px;
+font-family:'Comic Sans MS', cursive, sans-serif;
+}
+
+
+.error{visibility: hidden;
+color:red;
+font-style: italic;}
+
+.container{width: 40%;
+height: 40%
+ padding-top: 75%; /* defines aspect ratio */
+vertical-align: middle;
+border-radius: 15px;
+text-decoration: none;
+max-height:850px;
+max-width:400px
+
+position: absolute;
+background-color:white;
+margin-left:100px;
+margin-right:350px;
+margin-bottom: 100px;
+margin-top: 60px;
+	
+	}
+#abc{
+
+text-align:left;
+padding: 20px 10px 10px 30px;
+font-size:20px;
+font-weight: 10px;
+font-family:'Open Sans', sans-serif;
+color:#660033;
+background-color: white;
+border-style: solid;
+    border-width: 2px 2px 2px 2px;}
+a.cancel{
+    float:right;
+	margin: -2em 0 0 90%;
+    }
+ul{list-style-type: none;}
+#email{ margin-left: 90px; 
+        margin-top: 30px;
+        padding: 10px 10px 10px 10px;}
+#ConPassword{margin: 10px 50px 10px 30px;
+padding: 10px 10px 10px 10px;}
+.radio{margin:5px 5px 5px 80px;
+padding:10px 10px 10px 10px;
+}
+
+#email1{ margin-left: 70px; 
+        margin-top: 30px;
+        padding: 10px 10px 10px 10px;}
+
+		
+#password1{margin: 10px 80px 10px 40px;
+padding: 10px 10px 10px 30px;}
+ 
+.error1 after .error :
+.error1{
+color:red;
+font-weight: bold;
+font-style: italic;}
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+.container1{width: 40%;
+height: 50%
+ padding-top: 75%; /* defines aspect ratio */
+vertical-align: middle;
+border-radius: 15px;
+text-decoration: none;
+max-height:850px;
+max-width:400px
+float: right;
+background-color:white;
+margin-left:700px;
+margin-right:150px;
+margin-bottom: 200px;
+margin-top: -810px;
+
+	
+	}
+</style>
+
+<div class="container">
+
+
+<div id="abc">Register with FoodFinder...<a class="cancel" onclick="close_review();" href="#"><img src="images/cancel_pop_btn.jpg" height="43"></a></div><div><form name="myForm" action="POST"
+onsubmit="javascript: return validateForm();" method="get">
+<ul>
+<li>
+<label for="fname">First Name:</label><input type="text" id="fname" class = "tooltip"><span id="errfname" class="error">
+This is required</span></li>
+<li><label for="lname">Last Name:</label><input type="text" id="lname" name="lastname"><span id="errlname" class="error" >
+This is required</span></li>
+<li><label for="Email">Email:</label><input type="text" id="email" name="email" placeholder="abc@gmail.com" ><span id="erremail" class="error">This is required</span></li>
+<li><label for="Password" >Password :</label><input type="password" id="password" name="password" placeholder="*********"></li>
+<li><label for="ConPassword" >Confirm Password :</label><input type="password" id="Conpassword" name="Conpassword" placeholder="*********"><span id="errpass" class="error">Passwords you entered doesnot match</span></li>
+ 
+<li><label for="DOB"  >DOB:</label><input type="date" id="date" name="date" placeholder="mm/dd/yy"></li><br />
+ 
+<li class="gender"><label  for="Gender" >Gender:</label></li>
+<input class="radio" type="radio" name="gender" value="male" checked> Male<br />
+         <input class="radio" type="radio" name="gender" value="female"> Female<br />
+         <input class="radio" type="radio" name="gender" value="other"> Other<br />
+  
+                                               <input type="submit" value="Submit">
+ 
+  </ul>
+  </form>
+</div>
+</div>
+<div class="container1">
+<div class"loginSec" id="abc" >Already a memeber ? Login...<a class="cancel" onclick="close_review();" href="#"><img src="images/cancel_pop_btn.jpg" height="43"></a></div><div><form name="myForm1" id="myForm1" action="http://localhost:3030" method="get" >
+ <ul class="login">
+ <li>
+<label for="Email">Email </label><input type="text" id="email1" name="email1" placeholder="abc@gmail.com">
+ <span id="erremail1" class="error">This is required</span></li>
+ <li>
+ <span id="erremailFormat" class="error">Please enter a valid email</span></li>
+ <li>
+<label for="Password" >Password </label>
+ <input type="password" id="password1" name="password1" placeholder="*********">
+ <span id="erremailPwd" class="error1" style="display:none">Email/Password incorrect.Please try again</span><br />
+ <input class="submit" type="submit" value="Submit">
+</form>
+</div>
+
+</ul>
+</div>
+
+</body>
+<script type="text/javascript" >function close_review()
+{
+	window.document.location.href = 'HomePage.html';
+}</script>
+</html>

@@ -1,0 +1,40 @@
+ 
+h1
+{
+	font-weight: 300;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	font-size: 30px;
+	line-height: 50px;
+	color:  black;
+	margin: 0;
+  padding: 0 0 0 40px;
+	background-repeat:no-repeat;
+	
+	}
+main{
+  width: 110%;
+	float: left;
+  margin: 0 0 0 -2em;
+  min-height: 550px;
+	background-color:#ffe6cc;
+}
+div.container{
+	resize: both;
+    overflow: auto;
+}
+
+
+
+footer{
+	bottom: 0;
+background:#cb202d;
+font-family:"Times New Roman";
+font-size: 15px;
+color: white;
+ clear: both;
+ float:left; width:80%; height:auto; padding:10px 0px;
+ 
+
+    }
+	.footer{float:right;
+	padding: 14px 16px;}

@@ -1,0 +1,204 @@
+<head>
+<meta charset="UTF-8">
+<script src="scripts/jquery-1.12.1.js"></script>
+<script src="scripts/Login.js">
+</script>
+</head>
+<body>
+
+<style>
+body
+{
+ background-image: url('images/back.jpg');
+}
+input[type=text] {
+    width: 45%;
+    padding: 10px 10px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	
+}
+input[type=password]{
+width: 200px;
+padding: 10px 10px;
+margin:6px 0;
+display: inline-block;
+border: 1px solid #ccc ;
+    border-radius: 4px;
+    box-sizing: border-box;}
+
+input[type=submit],.submit{
+    width: 200px;
+    background-color: #cb202d;
+    color: white;
+    padding: 10px 10px;
+    margin-top: 20px ;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	float:center;
+	font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: #ff6666;
+}
+
+input[type=date] {
+    width: 200px;
+    
+   padding: 10px 10px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	float:center;
+	border: 1px solid #ccc ;
+	
+}
+label{
+font-size:15px;
+font-family:'Open Sans', sans-serif;;
+}
+
+h3 { font-size:20px;
+font-family:'Comic Sans MS', cursive, sans-serif;
+color:#cb202d;
+}
+
+.error{visibility: hidden;
+color:red;
+font-style: italic;}
+.error1{
+color:red;
+font-weight: bold;
+font-style: italic;}
+.loginSec aside
+{
+  float: right;
+  margin-left: 20%;
+  height: 500px;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+#abc{
+text-align:left;
+padding: 20px 10px 10px 25px;
+font-size:20px;
+font-weight: 10px;
+font-family:'Open Sans', sans-serif;;
+color:#cb202d;
+background-color: white;
+width: 300px;
+height: 30px;
+margin-left: 7px;
+margin-top: -47em;
+  }
+.loginSec1
+{
+  padding: 10px 10px 10px 30px;
+}
+  a.cancel{
+    float:right;
+  margin-right: -63px ;
+  margin-top:-61px;
+    }  
+    input:focus{
+    outline: none;
+}
+.container{
+   width: 460px;
+height: 700px;
+vertical-align: middle;
+border-radius: 4px;
+text-decoration: none;
+max-height:750px;
+max-width:900px;
+
+background-color:white;
+margin-left:400px;
+margin-right:0px;
+margin-bottom: 40px;
+margin-top: 1em;
+	
+	}
+	.container1{
+width: 450px;
+height: 300px;
+ padding-top: 150px; /* defines aspect ratio */
+vertical-align: middle;
+border-radius: 4px;
+text-decoration: none;
+max-width:400px;
+float: right;
+background-color:white;
+margin-left:0px;
+margin-right:450px;
+margin-top: 5em;
+min-height: 300px;
+
+	
+	}
+</style>
+<body >
+
+<div class="container1"  style="display:block">
+<aside class"loginSec" style="margin-left:1%; margin-top:52em;">
+ <div class"loginSec1" id="abc" >Already a member ? Login...<a class="cancel" onclick="close_review();" href="#"><img src="images/cancel_pop_btn.jpg" height="43"></a></div>
+ <div> <form name="myForm1" id="myForm1" action="" method="get" style="margin-top:2.3em">
+<label for="Email">Email </label><br/>
+ <input type="text" id="email1" name="email1" placeholder="abc@gmail.com" style="width: 350px">
+ <span id="erremail1" class="error">This is required</span>
+ <span id="erremailFormat" class="error">Please enter a valid email</span>
+ <br/><label for="Password" >Password </label><br/>
+ <input type="password" id="password1" name="password1" placeholder="*********"  style="width: 350px" ><br/>
+ <span id="erremailPwd" class="error1" style="display:none">Email/Password incorrect.Please try again</span>
+ <br/><input class="submit" value="LogIn" id="submitf2" style="text-align:center;width: 150px;margin-right:15px;"> OR 
+ <input class="submit" value="Register" id="registerf2" style="text-align:center;width: 150px;margin-left:15px;">
+</form>
+</div>
+</aside>
+</div>
+
+<pre>
+
+<div class="container" style="display:none">
+<div id="abc" style="margin-top: 3px;">Register with FoodFinder...
+
+<a class="cancel"  onclick="close_review();" style="margin-top:-83px;margin-right:-126px ;" href="#"><img src="images/cancel_pop_btn.jpg" height="43"></a>
+
+</div>
+<div style="margin-top:-15px"><form name="myForm" action="" method="post">
+<span id="erremailPwd1" class="error1" style="display:none">Something Went wrong.Please try again.</span>
+ <label for="fname" class="fName">First Name </label>
+ <input type="text" id="fname" class = "tooltip" ><span id="errfname" class="error">This is required</span>
+ <label for="lname">Last Name </label>
+ <input type="text" id="lname" name="lastname"><span id="errlname" class="error" >This is required</span>
+ <label for="Email">Email </label>
+ <input type="text" id="email" name="email" placeholder="abc@gmail.com" ><span id="erremail" class="error">This is required</span>
+ <label for="Password" >Password </label>
+ <input type="password" id="password" name="password" placeholder="*********">
+ <label for="ConPassword" >Confirm Password </label>
+ <input type="password" id="Conpassword" name="Conpassword" placeholder="*********"><span id="errpass" class="error">Passwords you entered doesnot match</span>
+ 
+ <label for="DOB"  >DOB *</label>
+ <input type="date" id="date" name="date" placeholder="mm/dd/yy">
+ 
+ <label for="Gender" >Gender</label>
+  <input type="radio" name="gender" value="male" checked> Male
+  <input type="radio" name="gender" value="female"> Female
+  <input type="radio" name="gender" value="other"> Other
+ <input  type="button" class="submit" value="Submit" id="submitf1">
+ <!-- <section class="note-input"><button>Submit</button></section> -->
+  
+  </form>
+</div>
+</div>
+</pre>
+
+</body>
+</html>

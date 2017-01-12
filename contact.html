@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Restaurant Home Page Website</title>
+<script>
+function validate(){
+var reg = /^([A-Za-z0-9_\-\.]){1,}\@([A-Za-z0-9_\-\.]){1,}\.([A-Za-z]{2,4})$/;
+	var add = document.forms["contact"]["email"].value;
+	if(reg.test(add)== false){
+		alert("Email: Invalid email, Please enter a valid email ");
+		document.forms["contact"]["email"].focus();
+		return false;
+	}
+	 
+}
+function close_review()
+{
+	window.document.location.href = 'HomePage.html';
+}
+</script>
+</head>
+<body style="background-image: url('images/back.jpg')";>
+<style>
+
+input[type=text] {
+    width: 50%;
+    padding: 10px 10px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	
+}
+
+
+input[type=submit] {
+    width: 200px;
+    background-color: #cb202d;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 30px 50px 10px 200px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	float: center;
+}
+
+input[type=submit]:hover {
+    background-color: #ff6666;
+}
+label{
+font-size:15px;
+font-family:'Comic Sans MS', cursive, sans-serif;
+}
+
+h3 { font-size:20px;
+font-family:'Comic Sans MS', cursive, sans-serif;
+color:#cb202d;
+margin-top: -2.5em;
+}
+#Message{
+width: 50%;
+height: 300px;
+
+}
+
+a.cancel{
+    float:right;
+	margin: -5.5em 10px 0 90%;
+    }
+.container{width: 40%;
+height: 40%
+ padding-top: 75%; /* defines aspect ratio */
+vertical-align: middle;
+border-radius: 15px;
+text-decoration: none;
+max-height:850px;
+max-width:400px
+
+position: absolute;
+background-color:white;
+margin-left:400px;
+margin-right:350px;
+margin-bottom: 100px;
+margin-top: 60px;}
+#abc{
+text-align:left;
+padding: 20px 10px 10px 30px;
+font-size:20px;
+font-weight: 10px;
+font-family:'Open Sans', sans-serif;;
+color:#cb202d;
+background-color: white;
+border-style: solid;
+    border-width: 2px 2px 2px 2px;}
+</style>
+<pre>
+<div class="container">
+<h3 id="abc">Contact Us...</h3><div><a class="cancel" onclick="close_review();" href="#"><img src="images/cancel_pop_btn.jpg" height="43"></a><form  name="contact"  method="post" onsubmit="javascript: return validate();">
+ <label for="name" style="margin-left:20px;">Name</label>
+ <input style="margin-left:20px;" type="text" id="Name" required>
+ <label style="margin-left:20px;" for="Email">Email</label>
+ <input  style="margin-left:20px;" type="text" id="email" name="email" placeholder="abc@gmail.com" required>
+ <label style="margin-left:20px;" for="msg">Message</label>
+ 
+ <textarea name="message" rows="15" cols="60" style="margin-left:20px;"></textarea>
+ <input type="submit" value="Submit">
+</form>
+</div>
+</pre>
+</div>
+</body>
+</html>
